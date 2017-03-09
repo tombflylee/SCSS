@@ -1,0 +1,99 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: "Abadi MT Condensed Light";
+  font-size:14px;
+  box-sizing: border-box;
+  font-weight:100;
+
+}
+html{
+  width:100%;
+  height:100%
+}
+body{
+  @extend html;
+  background: radial-gradient(#fff,#D8D8D8);
+  section{
+    width:80%;
+    margin:20px auto;
+    border-top:13px solid #2c3e50;
+    padding:20px;
+    text-align: center;
+    background: #fff;
+    h2{
+      font-size:4em;
+      letter-spacing:5px;
+      margin:20px 0;
+    }
+  }
+}
+$input-margin:15px;
+$input-height:54px;
+$label-shrink-width:100px;
+.contact-form{
+  div{
+    width:75%;
+    margin:$input-margin auto;
+    position:relative;
+    height:$input-height;
+    label,input,textarea{
+      color:#bdc3c7;
+      font-size:1.5em;
+      line-height: $input-height;
+      position:absolute;
+      left:0;
+      display: block;
+      height:$input-height;
+      width:100%;
+      border:0;
+      -webkit-transition:all 0.3s ease-in;
+      -moz-transition:all 0.3s ease-in;
+      -o-transition:all 0.3s ease-in;
+      transition:all 0.3s ease-in;
+      outline:none;
+    }
+    input,textarea{
+      background:#ecf0f1;
+      padding-left: $label-shrink-width+10px;
+    }
+    label{
+      background: #2c3e50;
+      text-align: center;
+    }
+    .contact-submit{
+      padding:0;
+      color:#fff;
+      width:25%;
+      left:50%;
+      margin-left:-12%;
+      background: #f39c12;
+    }
+  }
+}
+//event
+.contact-form{
+  div{
+    input,textarea{
+      &:hover+label{
+        width:$label-shrink-width;
+        color:#fff;
+      }
+      &:focus+label{
+        background:#f39c12;
+        width:$label-shrink-width;
+        color:#fff;
+      }
+    }
+    .contact-msg{
+      &:focus{
+      }
+    }
+    .contact-submit{
+      &:hover{
+        color:#f39c12;
+        background:#2c3e50;
+      }
+    }
+  }
+}
