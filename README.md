@@ -11,3 +11,5 @@ input type=button:默认高度不可调:
 
 
 outline:none;可以取消input标签选中时候的蓝色外边框。
+
+展示地址：http://codepen.io/tombflylee/pen/jByaxy
